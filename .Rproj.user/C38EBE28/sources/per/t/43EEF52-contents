@@ -14,16 +14,16 @@ addeR is a package to download python through R, install python modules, and lin
 
 ```{r, warning = FALSE, error = FALSE, message = FALSE}
 library(devtools)
-#install_github("GitTFJ/addeR")
-#library(addeR)
-#py_download() 
+install_github("GitTFJ/addeR")
+library(addeR)
+py_download() 
 #Downloads python and opens installation program. 
 #We recommend adding python to the PATH
 
-#install_modules(modules = c("keras", "tensorflow", "scikit-learn==0.19.1")) 
+install_modules(modules = c("keras", "tensorflow", "scikit-learn==0.19.1")) 
 #Specify python modules to install (and versions where necassary)
 
-#link_python()
+#link_python(set_path = F)
 #Link python to R
 ```
 

@@ -1,9 +1,0 @@
-"0","library(devtools)"
-"0","install_github(""GitTFJ/addeR"")"
-"2","Error: Failed to install 'addeR' from GitHub:
-  HTTP error 404.
-  Not Found
-
-  Did you spell the repo owner (`GitTFJ`) and repo name (`addeR`) correctly?
-  - If spelling is correct, check that you have the required permissions to access the repo.
-"

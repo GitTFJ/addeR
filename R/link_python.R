@@ -13,7 +13,7 @@
 
 
 link_python = function(set_path = T){
-  if(length(set_path) > 0){
+  if(set_path == T){
     message(paste0("Having opted to manually set the python path, locate the python.exe file on your PC. One possible location is: ", paste0("C:/Users/",Sys.getenv()['USERNAME'],"/AppData/Local/Programs/Python/Python36/python.exe")))
     reticulate::use_python(file.choose())
   } else if(dir.exists(paste0("C:/Users/",Sys.getenv()['USERNAME'],"/AppData/Local/Programs/Python/Python36"))) {
