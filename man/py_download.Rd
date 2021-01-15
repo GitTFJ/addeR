@@ -13,10 +13,10 @@ py_download(version = "3.6.8")
 An installed version of python
 }
 \description{
-This function downloads and prepares the install of python. Users can select the specific version of python, with the default set at 3.6.8 - a stable version to utilise python's machine learning languages. When prompted to install, you are given the choice to add Python to the PATH. If you only plan to use one version of python, this would be adviseable. This function currently only works for Windows operating systems.
+This function downloads and prepares the install of python. Users can select the specific version of python, with the default set at 3.6.8 - a stable version to utilise python's machine learning languages. When prompted to install, you may be given the choice to add Python to the PATH. If you only plan to use one version of python, this would be adviseable. This function currently only works for recent version of Windows, Mac and Linux.
 }
 \details{
-For the python install to be recognised by R, its important to close and re-open R, which resets the PATH's. As a result, we recommend saving scripts and important files before running this function. R will only close if confirmed by you (the user).
+For the python install to be recognised by R, its important to close and re-open R, which resets the PATH. As a result, we recommend saving scripts and important files before running this function. R will only close if confirmed by you (the user).
 }
 \examples{
 py_download()

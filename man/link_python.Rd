@@ -4,17 +4,14 @@
 \alias{link_python}
 \title{Links python to R}
 \usage{
-link_python(set_path = T)
-}
-\arguments{
-\item{set_path}{Specify whether you want to manually link R and python. Binary: TRUE/FALSE}
+link_python()
 }
 \value{
 Linked python program
 }
 \description{
-To run python through R, its necassary ot link python to R. This can be done manually by opting to specify the python.exe file path, or you can allow the function search for a python.exe file.
+To run python through R, its necassary ot link python to R. link_python() recommends a potential python location and prompts the user to select it.
 }
 \examples{
-link_python(set_path = T)
+link_python()
 }

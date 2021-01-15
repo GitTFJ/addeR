@@ -23,7 +23,7 @@ py_download()
 install_modules(modules = c("keras", "tensorflow", "scikit-learn==0.19.1")) 
 #Specify python modules to install (and versions where necassary)
 
-#link_python(set_path = F)
+link_python()
 #Link python to R
 ```
 

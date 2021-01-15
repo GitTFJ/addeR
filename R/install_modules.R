@@ -15,15 +15,29 @@
 
 
 install_modules = function(modules, upgrade_pip = T){
-  if(upgrade_pip == T){
-    shell("python -m pip install --upgrade pip")
+  if(grepl("Windows",Sys.getenv()['OS'])){
+    if(upgrade_pip == T){
+      shell("python -m pip install --upgrade pip")
+    } else {
+    }
+    if(length(modules) == 0){
+      warning("No python modules have been specified")
+    } else {
+      for(a in modules){
+        shell(paste0("python -m pip install ",a))
+      }
+    }
   } else {
-  }
-  if(length(modules) == 0){
-    warning("No python modules have been specified")
-  } else {
-    for(a in modules){
-      shell(paste0("python -m pip install ",a))
+    if(upgrade_pip == T){
+      shell("python3 -m pip3 install --upgrade pip3")
+    } else {
+    }
+    if(length(modules) == 0){
+      warning("No python modules have been specified")
+    } else {
+      for(a in modules){
+        shell(paste0("python3 -m pip3 install ",a))
+      }
     }
   }
 }
