@@ -22,3 +22,5 @@ link_python = function(){
     reticulate::use_python(file.choose())
   }
 }
+
+link_python()

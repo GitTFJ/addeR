@@ -27,14 +27,7 @@ py_download = function(version = "3.6.8"){
   } else {
     system("sudo apt-get install python3.6")
   }
-  confirm_quit = readline(
-    prompt="
-      To recognise the python download, Rstudio needs to be closed
-      and re-opened. Type 'quit' to close R now")
-  if(confirm_quit == "quit"){
-    q("no", 1, FALSE)
-  } else {
-    message("You have opted to close and restart R studio manually.")
-  }
+   message("To recognise the python download, Rstudio needs to be closed
+      and re-opened")
 }
 
