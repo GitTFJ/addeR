@@ -23,4 +23,3 @@ link_python = function(){
   }
 }
 
-link_python()
