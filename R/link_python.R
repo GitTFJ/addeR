@@ -11,13 +11,11 @@
 
 link_python = function(){
   if(grepl("indows",Sys.getenv()['OS'])){
-    message("Select the python path. One possible locations is:
-")
+    message(paste("Select the python path. One possible locations is:", system("where python")))
     tmp = system("where python")
     reticulate::use_python(file.choose())
   } else {
-    message("Select the python path. One possible locations is:
-")
+    message(paste("Select the python path. One possible locations is:", system("where python3")))
     tmp = system("which python3")
     reticulate::use_python(file.choose())
   }

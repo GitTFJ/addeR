@@ -12,10 +12,13 @@ output:
 
 addeR is a package to download python through R, install python modules, and link python to R.
 
-```{r, warning = FALSE, error = FALSE, message = FALSE}
+```{r, warning = FALSE, error = FALSE, message = FALSE, results = "hide"}
 library(devtools)
 install_github("GitTFJ/addeR")
 library(addeR)
+```
+
+```{r, warning = FALSE, error = FALSE, message = FALSE}
 py_download() 
 #Downloads python and opens installation program. 
 #We recommend adding python to the PATH
