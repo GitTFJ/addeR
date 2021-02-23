@@ -17,13 +17,17 @@
 #Prepare classification models
 py_download = function(version = "3.6.8"){
   if(grepl("Windows",Sys.getenv()['OS'])){
+    if("installr" %in% rownames(installed.packages()) == T){
+    } else {
+      install.packages("installr")
+    }
     if(grepl("64", Sys.getenv()['R_ARCH'])){
       installr::install.URL(paste0("https://www.python.org/ftp/python/",version,"/python-",version,"-amd64.exe"))
     } else {
       installr::install.URL(paste0("https://www.python.org/ftp/python/",version,"/python-",version,".exe"))
     }
   } else if (grepl("ac",Sys.getenv()['OS'])){
-    installr::install.URL(paste0("https://www.python.org/ftp/python/",version,"/python-",version,"-macosx10.6.pkg"))
+    browseURL(paste0("https://www.python.org/ftp/python/",version,"/python-",version,"-macosx10.6.pkg"))
   } else {
     system("sudo apt-get install python3.6")
   }

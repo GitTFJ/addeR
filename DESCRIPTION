@@ -8,8 +8,9 @@ License: creative commons
 Encoding: UTF-8
 LazyData: true
 Imports:
-        installr,
         reticulate
+Suggests:
+        installr
 RoxygenNote: 7.1.1
 Depends: 
     R (>= 3.10)
