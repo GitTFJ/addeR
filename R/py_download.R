@@ -26,7 +26,7 @@ py_download = function(version = "3.6.8"){
     } else {
       installr::install.URL(paste0("https://www.python.org/ftp/python/",version,"/python-",version,".exe"))
     }
-  } else if (grepl("ac",Sys.getenv()['OS'])){
+  } else if (grepl("apple",Sys.getenv()['R_PLATFORM'])){
     browseURL(paste0("https://www.python.org/ftp/python/",version,"/python-",version,"-macosx10.6.pkg"))
   } else {
     system("sudo apt-get install python3.6")
